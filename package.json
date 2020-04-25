@@ -11,8 +11,10 @@
   "author": "Marco Elizalde <contacto@marcoelizalde.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongodb": "^3.5.6",
     "pug": "^2.0.4"
   },
   "devDependencies": {
