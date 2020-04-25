@@ -4,6 +4,7 @@ const path = require('path')
 const bodyParse = require('body-parser')
 const productsRouter = require('./routes/views/products')
 const productsApiRouter = require('./routes/api/products')
+const authApiRouter = require("./routes/api/auth");
 const boom = require("boom");
 const { clientErrorHandler, errorHandler, logErrors, wrapErrors } = require('./utils/middleware/errosHandlers');
 const isRequestAjaxOrApi = require('./utils/isRequestAjaxOrApi')
@@ -23,7 +24,8 @@ app.set("view engine", "pug")
 
 // routes
 app.use('/products', productsRouter)
-app.use('/api/products', productsApiRouter)
+app.use('/api/products', productsApiRouter);
+app.use("/api/auth", authApiRouter);
 
 // redirect
 app.get('/', function (req, res) {
