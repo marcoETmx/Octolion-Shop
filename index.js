@@ -1,12 +1,15 @@
 
 const express = require('express')
 const path = require('path')
+const cors = require("cors");
 const bodyParse = require('body-parser')
 const productsRouter = require('./routes/views/products')
 const productsApiRouter = require("./routes/api/products");
 const debug = require("debug")("app:server");
 const authApiRouter = require("./routes/api/auth");
 const boom = require("boom");
+const helmet = require("helmet");
+
 const { clientErrorHandler, errorHandler, logErrors, wrapErrors } = require('./utils/middleware/errosHandlers');
 const isRequestAjaxOrApi = require('./utils/isRequestAjaxOrApi')
 
@@ -14,7 +17,9 @@ const isRequestAjaxOrApi = require('./utils/isRequestAjaxOrApi')
 const app = express();
 
 // middleware
+app.use(helmet());
 app.use(bodyParse.json())
+app.use(cors());
 
 // static files
 app.use('/static', express.static(path.join(__dirname, "public")))
