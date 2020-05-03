@@ -1,0 +1,27 @@
+{
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@now/node-server"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.js"
+        }
+    ],
+    "env": {
+        "DB_USER": "@octolion-db_user",
+        "DB_PASSWORD": "@octolion-db_password",
+        "DB_HOST": "@octolion-db_host",
+        "DB_NAME": "@octolion-db_name",
+        "AUTH_ADMIN_USERNAME": "@octolion-auth_admin_username",
+        "AUTH_ADMIN_PASSWORD": "@octolion-auth_admin_password",
+        "AUTH_ADMIN_EMAIL": "@octolion-auth_admin_email",
+        "AUTH_JWT_SECRET": "@octolion-auth_jwt_secret",
+        "SENTRY_DNS": "@octolion-sentry_dns",
+        "SENTRY_ID": "@octolion-sentry_id",
+        "NODEJS_HELPERS": "0"
+    }
+  }

@@ -1,20 +1,24 @@
 {
-  "name": "ecommerce",
+  "name": "octolion-shop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node index",
-    "build": "cd public/assets && cleancss -o main.min.css main.css",
     "dev": "nodemon index",
     "dev:inspect": "nodemon --inspect index",
     "dev:debug": "DEBUG=express:*,app:* npm run dev",
     "debug": "DEBUG=express:*,app:* npm run start",
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "build": "octolion-shop build"
   },
   "keywords": [],
   "author": "Marco Elizalde <contacto@marcoelizalde.com>",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/marcoETmx/Octolion-Shop"
+  },
   "dependencies": {
     "@sentry/node": "^5.15.5",
     "bcrypt": "^4.0.1",

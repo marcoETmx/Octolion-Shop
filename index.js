@@ -22,7 +22,7 @@ app.use(bodyParse.json())
 app.use(cors());
 
 // static files
-app.use('/static', express.static(path.join(__dirname, "public")))
+app.use('/static', express.static(path.join(__dirname, "files")))
 
 // View engine setup
 app.set("views", path.join(__dirname, "views"));
