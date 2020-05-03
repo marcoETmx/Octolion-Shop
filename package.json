@@ -10,14 +10,16 @@
     "dev:debug": "DEBUG=express:*,app:* npm run dev",
     "debug": "DEBUG=express:*,app:* npm run start",
     "test": "mocha --exit",
-    "build": "octolion-shop build"
+    "build": "octolion-shop build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "Marco Elizalde <contacto@marcoelizalde.com>",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/marcoETmx/Octolion-Shop"
+    "type": "git",
+    "url": "https://github.com/marcoETmx/Octolion-Shop"
   },
   "dependencies": {
     "@sentry/node": "^5.15.5",
@@ -35,7 +37,8 @@
     "passport": "^0.4.1",
     "passport-http": "^0.3.0",
     "passport-jwt": "^4.0.0",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "chalk": "^4.0.0",
@@ -55,5 +58,6 @@
       "lib",
       "utils"
     ]
-  }
+  },
+  "snyk": true
 }
