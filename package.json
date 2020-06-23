@@ -20,7 +20,7 @@
     "url" : "https://github.com/marcoETmx/Octolion-Shop"
   },
   "dependencies": {
-    "@sentry/node": "^5.15.5",
+    "@sentry/node": "^5.16.0",
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "boom": "^7.3.0",
